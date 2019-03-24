@@ -2,7 +2,7 @@
 
 require "../src/bytecode"
 
-alias CodeType = String | Array(ByteCode)
+alias CodeType = Array(ByteCode)
 
 class Code
   property pos
@@ -44,15 +44,5 @@ class Code
   def backward
     @pos -= 1
     raise "Tape position should be > 0" if @pos < 0
-  end
-
-  def type
-    if @code.is_a?(String)
-      :Code
-    elsif @code.is_a?(Array(ByteCode))
-      :ByteCode
-    else
-      :Unknown
-    end
   end
 end

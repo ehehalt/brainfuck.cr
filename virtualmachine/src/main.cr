@@ -12,9 +12,5 @@ if ARGV.size > 0
     preprocessor = Preprocessor.new(code)
     interpreter = Interpreter.new(preprocessor.bytecode)
     interpreter.run
-  else
-    puts "Brainf*ck with C*de"
-    interpreter = Interpreter.new(code)
-    interpreter.run
   end
 end
