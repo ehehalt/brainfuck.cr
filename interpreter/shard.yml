@@ -1,0 +1,13 @@
+name: brainfuck
+version: 0.1.0
+
+authors:
+  - Mike <mike42@hotmail.de>
+
+targets:
+  brainfuck:
+    main: src/brainfuck.cr
+
+crystal: 0.27.2
+
+license: MIT

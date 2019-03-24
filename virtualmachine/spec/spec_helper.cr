@@ -1,0 +1,7 @@
+require "spec"
+require "../src/brainfuck"
+require "../src/bytecode"
+require "../src/code"
+require "../src/interpreter"
+require "../src/preprocessor"
+require "../src/tape"
