@@ -6,9 +6,10 @@ require "../src/preprocessor"
 code : String = ""
 
 if ARGV.size > 0
-  code = File.read(ARGV[0])
-  if ARGV.size > 1
-    puts "Brainf*ck with ByteC*de"
+  file = ARGV[0]
+  code = File.read(file)
+  if ARGV.size > 0
+    puts "Brainf*ck with ByteC*de from '#{file}'"
     preprocessor = Preprocessor.new(code)
     interpreter = Interpreter.new(preprocessor.bytecode)
     interpreter.run

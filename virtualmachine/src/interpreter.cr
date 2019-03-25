@@ -16,11 +16,6 @@ class Interpreter
   end
 
   def run
-    puts "Interpreter ByteC*de"
-    runByteCode()
-  end
-
-  def runByteCode
     while @code.active
       bytecode = @code.get_bytecode
       case bytecode.code
