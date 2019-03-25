@@ -13,7 +13,6 @@ class Interpreter
   end
 
   def run
-    puts "Interpreter C*de"
     runCode()
   end
 

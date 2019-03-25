@@ -5,8 +5,9 @@ require "../src/interpreter"
 code : String = ""
 
 if ARGV.size > 0
-  code = File.read(ARGV[0])
-  puts "Brainf*ck with C*de"
+  file = ARGV[0]
+  code = File.read(file)
+  puts "Brainf*ck with C*de '#{file}'"
   interpreter = Interpreter.new(code)
   interpreter.run
 end
