@@ -1,3 +1,3 @@
-# Brainfuck in Crystal
+# Brainf*ck in Crystal
 
-Brainfuck interpreter in Crystal.
+Brainf*ck interpreter in Crystal.
