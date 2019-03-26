@@ -3,7 +3,7 @@
 
 class Tape
   def initialize
-    @tape = [0]
+    @tape = Array(Int32).new(30000, 0)
     @pos = 0
   end
 
@@ -29,13 +29,13 @@ class Tape
 
   def forward(positions = 1)
     @pos += positions
-    while @pos >= @tape.size
-      @tape << 0
-    end
+    # while @pos >= @tape.size
+    #   @tape << 0
+    # end
   end
 
   def backward(positions = 1)
     @pos -= positions
-    raise "Tape position should be > 0" if @pos < 0
+    # raise "Tape position should be > 0" if @pos < 0
   end
 end
