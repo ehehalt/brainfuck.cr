@@ -21,25 +21,11 @@ class Interpreter
       case bytecode.code
       when '['
         if @tape.get == 0
-          depth = 1
-          while depth != 0
-            @code.forward
-            case @code.get_bytecode.code
-            when '['; depth += 1
-            when ']'; depth -= 1
-            end
-          end
+          @code.pos = bytecode.loop_end
         end
       when ']'
         if @tape.get != 0
-          depth = 1
-          while depth != 0
-            @code.backward
-            case @code.get_bytecode.code
-            when ']'; depth += 1
-            when '['; depth -= 1
-            end
-          end
+          @code.pos = bytecode.loop_begin
         end
         # return @tape.get != 0
       when '>'; @tape.forward(bytecode.count)
