@@ -2,7 +2,6 @@
 
 Brainf*ck interpreter and virtual machine in Crystal.
 
-
 Times to calculate the mandelbrot sample on a MacBook Pro with Crystal 0.27.2:
 
 | type            | time    |
